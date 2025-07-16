@@ -124,12 +124,21 @@ multi_user_pdf_qa/
 - `numpy==1.23.1`: Numerical computations.
 
 ## Demo Results
-Tested with 5 research papers on May 28, 2025, 02:09 AM IST. Screenshots in `screenshots/` folder:
-- `streamlit_paper1.png` to `streamlit_paper5.png`: Streamlit UI for each paper’s query.
-- `docker_build.png`: Docker build output.
-- `kubectl_commands.png`: `kubectl apply` and `port-forward` outputs.
-- `docker_containers.png`: Running containers.
-- `docker_images.png`: Docker images.
-- `docker_volumes.png`: Docker volumes.
-- `docker_builds.png`: Build history.
-- `kubectl_docker_status.png`: `kubectl get pods`, `kubectl get svc`, `docker ps` outputs.
+
+Tested with 5 research papers. Screenshots are available in the `screenshots/` folder:
+
+### Streamlit UI
+- ![Paper 1](screenshots/streamlit_paper1.png)
+- ![Paper 2](screenshots/streamlit_paper2.png)
+- ![Paper 3](screenshots/streamlit_paper3.png)
+- ![Paper 4](screenshots/streamlit_paper4.png)
+- ![Paper 5](screenshots/streamlit_paper5.png)
+
+### Docker & Kubernetes
+- ![Docker Build](screenshots/docker_build.png)
+- ![Kubectl Commands](screenshots/kubectl_commands.png)
+- ![Running Containers](screenshots/docker_containers.png)
+- ![Docker Images](screenshots/docker_images.png)
+- ![Docker Volumes](screenshots/docker_volumes.png)
+- ![Docker Build History](screenshots/docker_builds.png)
+- ![Kubectl + Docker Status](screenshots/kubectl_docker_status.png)
