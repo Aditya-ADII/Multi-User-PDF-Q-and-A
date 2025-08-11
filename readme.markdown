@@ -68,6 +68,26 @@ multi_user_pdf_qa/
 6. **Response**: Gemini generates concise answers, stored in Redis chat history.
 7. **Multi-User**: Kubernetes/Docker ensures isolated sessions per user.
 
+## System Architecture Diagram
+- ![System Architecture Diagram](screenshots/arch1.png)
+```
++--------------------------------------------------------------------------------------------------------------------+
+|                                   MULTI-USER PDF Q&A SYSTEM (Run Time)                                             |
+|                                                                                                                    |
+| [User] -> [Streamlit Web App] -> [PDF Upload] -> [PyPDF2 Text Extraction] -> [Text Chunks]                         |
+|    |                                                                                                               |
+|    |                                       +--> [Sentence-Transformers] -> [Embeddings]                            |
+|    |                                       |                                                                       |
+|    |                                       v                                                                       |
+|    +-----> [User Query] -> [Redis] <---- [FAISS Index] -> [Context Retrieval]                                      |
+|                     |                                                                                              |
+|                     v                                                                                              |
+|                  [Gemini 1.5 Flash API] -> [Generated Answer] -> [Redis Chat History]                              |
+|                                                                                                                    |
+| [Kubernetes/Docker] <- (Manages Scalability and Multi-User Sessions) -> [Docker Containers]                        |
+|                                                                                                                    |
++--------------------------------------------------------------------------------------------------------------------+
+```
 ## Running the Project
 1. Build the Docker image:
    ```powershell
