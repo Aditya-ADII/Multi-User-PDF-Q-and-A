@@ -69,7 +69,7 @@ multi_user_pdf_qa/
 7. **Multi-User**: Kubernetes/Docker ensures isolated sessions per user.
 
 ## System Architecture Diagram
-- ![System Architecture Diagram](screenshots/arch1.png)
+- ![System Architecture Diagram](screenshots/arch11.png)
 ```
 +--------------------------------------------------------------------------------------------------------------------+
 |                                   MULTI-USER PDF Q&A SYSTEM (Run Time)                                             |
